@@ -1,4 +1,4 @@
-package Project;
+package SalesSYS;
 
 import javax.swing.*;
 import java.awt.*;
@@ -65,7 +65,7 @@ public class RemoveClientGUI extends JFrame {
 
         @Override
         public void windowClosed(WindowEvent e) {
-            JOptionPane.showMessageDialog(null, "Add Table Window Closed", "Add Table Window Closed",
+            JOptionPane.showMessageDialog(null, "Remove Client Window Closed", "Remove Client Window Closed",
                     JOptionPane.INFORMATION_MESSAGE);
 
             MainMenu mnu = new MainMenu();
@@ -73,26 +73,26 @@ public class RemoveClientGUI extends JFrame {
 
         @Override
         public void windowIconified(WindowEvent e) {
-            JOptionPane.showMessageDialog(null, "Add Table Window Minimised", "Amend Table Window Minimised",
+            JOptionPane.showMessageDialog(null, "Remove Client Window Minimised", "Remove Client Window Minimised",
                     JOptionPane.INFORMATION_MESSAGE);
         }
 
         @Override
         public void windowDeiconified(WindowEvent e) {
-            JOptionPane.showMessageDialog(null, "Add Table Window Unminimised", "Amend Table Window Unminimised",
+            JOptionPane.showMessageDialog(null, "Remove Client Window Unminimised", "Remove Client Window Unminimised",
                     JOptionPane.INFORMATION_MESSAGE);
 
-            MainMenu mnu = new MainMenu();
+            MainMenu Main = new MainMenu();
         }
 
         @Override
         public void windowActivated(WindowEvent e) {
-            System.out.println("Add Tables Window Activated");
+            System.out.println("Remove Client Window Activated");
         }
 
         @Override
         public void windowDeactivated(WindowEvent e) {
-            System.out.println("Add Tables Window Deactivated");
+            System.out.println("Remove Client Window Deactivated");
         }
     }
 

@@ -37,6 +37,8 @@ public class MainMenu extends JFrame implements ActionListener {
         MainMenu Main = new MainMenu();
     }
 
+
+
     public void actionPerformed(ActionEvent event){
         String menuName;
         menuName=event.getActionCommand();//menu name is acting as getActionCommand
@@ -63,11 +65,11 @@ public class MainMenu extends JFrame implements ActionListener {
         }
         if (menuName.equals(("Update Clients"))){
             JOptionPane.showMessageDialog(null,"Update Client GUI opened","Activated Update Client GUI",JOptionPane.INFORMATION_MESSAGE);
-            UpdateClientGUI2 Uc = new UpdateClientGUI2();
+            UpdateClientGUI Uc = new UpdateClientGUI();
         }
         if (menuName.equals(("Remove Clients"))){
             JOptionPane.showMessageDialog(null,"Remove Client GUI opened","Activated Remove Client GUI",JOptionPane.INFORMATION_MESSAGE);
-            RemoveClientGUI Rc = new RemoveClientGUI();
+            RemoveClientGUI rc = new RemoveClientGUI();
         }
         if (menuName.equals(("Query Clients"))){
             JOptionPane.showMessageDialog(null,"Query Clients GUI opened","Activated Query Client GUI",JOptionPane.INFORMATION_MESSAGE);
@@ -85,7 +87,7 @@ public class MainMenu extends JFrame implements ActionListener {
         ProductMenu = new JMenu("Products");
 
         item = new JMenu("Add Products");
-        item.setMnemonic(KeyEvent.VK_A);
+        //item.setMnemonic(KeyEvent.VK_A);
         item.addActionListener(this);
         ProductMenu.add(item);
 
@@ -137,7 +139,7 @@ public class MainMenu extends JFrame implements ActionListener {
 
         SalesMenu = new JMenu("Sales");
 
-        item = new JMenu("Process Sale");
+        item = new JMenu("Process Sales");
         item.addActionListener(this);
         SalesMenu.add(item);
     }

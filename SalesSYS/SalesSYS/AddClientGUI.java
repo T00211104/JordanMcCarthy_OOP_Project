@@ -1,9 +1,11 @@
-package Project;
+package SalesSYS;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -36,13 +38,65 @@ public class AddClientGUI extends JFrame{
         add(panel);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(400,400);
+        setSize(360,360);
         setVisible(true);
         setResizable(false);
     }
 
     public static void main(String[] args) {
-        Object AddClient = new AddClientGUI();}
+        Object AddClientGUI = new AddClientGUI();}
+
+    private class WindowEventHandler implements WindowListener {
+
+        public void windowOpened(WindowEvent e) {
+            JOptionPane.showMessageDialog(null, "Add Client Window now opened", "Window Opened",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+
+        public void windowClosing(WindowEvent e) {
+            JOptionPane.showMessageDialog(null, "Now closing window", "Closing Window",
+                    JOptionPane.INFORMATION_MESSAGE);
+            int choice = JOptionPane.showConfirmDialog(null, "Are you sure you want to exit this application?", "Exiting Application Confirmation",
+                    JOptionPane.YES_NO_CANCEL_OPTION);
+
+            if (choice == JOptionPane.YES_OPTION)
+                dispose();
+        }
+
+        @Override
+        public void windowClosed(WindowEvent e) {
+            JOptionPane.showMessageDialog(null, "Add Client Window Closed", "Add Client Window Closed",
+                    JOptionPane.INFORMATION_MESSAGE);
+
+            MainMenu mnu = new MainMenu();
+        }
+
+        @Override
+        public void windowIconified(WindowEvent e) {
+            JOptionPane.showMessageDialog(null, "Add Client Window Minimised", "Add Client Window Minimised",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+
+        @Override
+        public void windowDeiconified(WindowEvent e) {
+            JOptionPane.showMessageDialog(null, "Add Client Window Unminimised", "Add Client Window Unminimised",
+                    JOptionPane.INFORMATION_MESSAGE);
+
+            MainMenu Main = new MainMenu();
+        }
+
+        @Override
+        public void windowActivated(WindowEvent e) {
+            JOptionPane.showMessageDialog(null,"Add Client Window Activated","Add Client Window Opened",JOptionPane.INFORMATION_MESSAGE);
+        }
+
+        @Override
+        public void windowDeactivated(WindowEvent e) {
+            JOptionPane.showMessageDialog(null,"Add Client Window De-activated","Add Client Window Closed",JOptionPane.INFORMATION_MESSAGE);
+        }
+    }
+
+
 
     private JPanel createTitlePanel() {
         JPanel panel = new JPanel();
@@ -155,12 +209,41 @@ public class AddClientGUI extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 String dateRegistered = dateRegisteredField.getText();
 
-                if (dateRegistered.length() >= 7){
+                if (dateRegistered.length() == 10){
 
                     try{
-                        int day = Integer.parseInt(dateRegistered.substring(0,2));
-                        int month = Integer.parseInt(dateRegistered.substring(3,5));
+
+
+                        int cid =0;
+                        String clientID = ClientIDField.getText();
+                        if(clientID != null && clientID.isEmpty())
+                        {
+                            cid = Integer.parseInt(clientID);
+                        }
+
+
+                        String firstName = firstNameField.getText();
+                        if(firstName!="" && firstName.isEmpty())
+                        {
+                           String fn = firstName;
+                        }
+
+                        String lastName = lastNameField.getText();
+                        if(lastName!="" && lastName.isEmpty())
+                        {
+
+                        }
+
+                        String PhoneNo = phoneNoField.getText();
+                        if(PhoneNo!="" && PhoneNo.isEmpty())
+                        {
+
+                        }
+                        int day = Integer.parseInt(dateRegistered.substring(0,1));
+                        int month = Integer.parseInt(dateRegistered.substring(3,4));
                         int year = Integer.parseInt(dateRegistered.substring(6));
+
+
 
                         GregorianCalendar dateRegisteredGC = new GregorianCalendar(year,month-1,day);
                         dateRegisteredGC.setLenient(false);
@@ -170,14 +253,7 @@ public class AddClientGUI extends JFrame{
                                 dateRegisteredGC.get(Calendar.MONTH) + "-" +
                                 dateRegisteredGC.get(Calendar.YEAR));
 
-                        int fn =0;
-                        String firNam = firstNameField.getText();
-                        if(firNam!="" && firNam.isEmpty())
-                        {
-                            fn = Integer.parseInt(firNam);
-                        }
-
-                        Client c = new Client(fn,lastNameField.getText(),phoneNoField.getText(),dateRegisteredField.getText(),dateRegisteredGC);
+                        Client c = new Client(cid,firstName,lastName,PhoneNo,dateRegisteredGC);
 
                         Client c1 = new Client(1,"Michael","McGinn","0871234567",new GregorianCalendar(2006,01,15));
                         Client c2 = new Client(2,"Margaret","Flaherty","0872345678",new GregorianCalendar(2007,03,17));
@@ -205,4 +281,5 @@ public class AddClientGUI extends JFrame{
         panel.add(addClientButton);
         return panel;
     }
+
 }
