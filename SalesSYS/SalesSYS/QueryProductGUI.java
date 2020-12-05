@@ -10,6 +10,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 
+//QueryProductGUI.java
+/*This GUI class implements JFrame. The GUI Class displays a JOptionPane
+ *which displays a button which will retrieves all the Product details and
+ *displays in a JOptionPane*/
+
 public class QueryProductGUI extends JFrame {
 
 

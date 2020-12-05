@@ -9,6 +9,12 @@ import java.awt.event.WindowListener;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+//AddProductGUI.java
+/*
+This GUI class implements JFrame. It takes attributes( productID,name,manufacturer,quantity,
+description,price) from Client.java then it displays a JOptionPane with the textFields so the
+user can add in a new Product.java The GUI then displays the data added
+*/
 
 public class AddProductGUI extends JFrame{
 

@@ -11,6 +11,11 @@ import java.util.Arrays;
 import java.util.GregorianCalendar;
 import java.util.Iterator;
 
+//QueryClientGUI.java
+/*This GUI class implements JFrame. The GUI Class displays a JOptionPane
+*which displays a button which will retrieves all the Client details and
+*displays in a JOptionPane*/
+
 public class QueryClientGUI extends JFrame {
 
     public QueryClientGUI() {

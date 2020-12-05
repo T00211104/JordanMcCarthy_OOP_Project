@@ -10,6 +10,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.GregorianCalendar;
 
+//RemoveClientGUI.java
+/*This GUI class implements JFrame. This class asks the user which
+* ClientID to remove, it displays the ClientID's to make sure
+* the user is certain about deleting the client's details, then if
+* the user wants to it will delete it form the array*/
 
 public class RemoveClientGUI extends JFrame {
 

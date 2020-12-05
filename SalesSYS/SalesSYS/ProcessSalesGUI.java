@@ -10,8 +10,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.GregorianCalendar;
 
-
-/*This GUI */
+//ProcessSalesGUI.java
+/*This GUI class implements JFrame it takes in details of products and clients from
+ each respective array. Then a JOptionPane displays a list of JTextField(ProductID,
+ ClientID,Name,Quantity). When the JTextFields are correctly filled,it will remove
+ the quantity from products array, then show the product and client you have just
+ purchased/used*/
 
 public class ProcessSalesGUI extends JFrame{
      private final Insets normalInsets = new Insets(5,10,0,10);

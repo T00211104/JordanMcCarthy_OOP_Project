@@ -9,6 +9,11 @@ import java.awt.event.WindowListener;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+//RemoveProductGUI.java
+/*This GUI class implements JFrame. This class asks the user which
+* ProductID to remove, it displays the ProductID's to make sure
+* the user is certain about deleting the product's details, then if
+* asks if the user wants to do and it will delete it from the array*/
 
 public class RemoveProductGUI extends JFrame {
 

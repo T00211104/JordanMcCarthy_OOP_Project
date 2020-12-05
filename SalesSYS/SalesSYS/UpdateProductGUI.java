@@ -10,9 +10,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 
-//UpdateProduct.java
-/*This GUI class is used to Update a products details using JFrame. Also attributes being
- ProductID,Name,Manufacturer, Quantity and Description.*/
+//UpdateProductGUI.java
+/*This GUI class is used to Update a Product details using JFrame. Also attributes being
+(productID,name,manufacturer,quantity,description,price) retrieved from the
+Product.java. This GUI displays a JOptionPane and gives the user the attributes boxes so
+he/she can input into the textFields, the GUI then displays the details and is updated in
+the system.*/
 public class UpdateProductGUI extends JFrame{
 
     private final Insets normalInsets = new Insets(5,10,0,10);
