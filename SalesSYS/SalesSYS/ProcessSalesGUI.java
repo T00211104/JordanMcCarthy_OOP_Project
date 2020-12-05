@@ -15,7 +15,7 @@ import java.util.GregorianCalendar;
 
 public class ProcessSalesGUI extends JFrame{
      private final Insets normalInsets = new Insets(5,10,0,10);
-     private final Insets topInsets = new Insets(5,110,0,0);
+     private final Insets topInsets = new Insets(5,110,0,10);
      private JTextField ProductIDField;
      private JTextField ClientIDField;
      private JTextField NameField;

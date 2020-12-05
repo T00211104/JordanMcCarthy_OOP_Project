@@ -11,6 +11,13 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+//AddClientGUI.java
+/*
+This GUI class implements JFrame. It takes attributes from Client.java then it displays
+JOptionPane with the textFields so the user can add in a new Client. The GUI then displays
+the data added
+*/
+
 public class AddClientGUI extends JFrame{
 
     private final Insets normalInsets = new Insets(5,10,0,10);

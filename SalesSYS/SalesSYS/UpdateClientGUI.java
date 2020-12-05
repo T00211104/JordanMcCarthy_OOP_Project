@@ -11,7 +11,9 @@ import java.util.Arrays;
 import java.util.GregorianCalendar;
 //UpdateClient.java
 /*This GUI class is used to Update a clients details using JFrame. Also attributes being
- ClientID, firstName, lastName, PhoneNo and date Registered.*/
+ ClientID, firstName, lastName, PhoneNo and date Registered, that are retrieved from the Client.java. This GUI displays a JOptionPane
+  and gives the user the attributes boxes so he/she can input into the textFields, the GUI then displays
+   the details and is updated in the system.*/
 
 public class UpdateClientGUI extends JFrame {
     private final Insets normalInsets = new Insets(5, 10, 0, 10);

@@ -1,7 +1,7 @@
 package SalesSYS;
 
 //Client.java
-/*An instantiable class definition for a Client*/
+/*An instantiable class definition for a Client, which also uses GregorianCalendar for date*/
 
 import java.io.Serializable;
 import java.util.GregorianCalendar;
